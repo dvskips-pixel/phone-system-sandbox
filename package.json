@@ -1,0 +1,25 @@
+{
+  "name": "spectrum-credit-phone-lease-desk",
+  "version": "1.0.0",
+  "description": "Spectrum Credit Limited - Kenya device leasing desk with full ledger, credit assessment, M-PESA integration, and role-based controls",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "node scripts/build.js",
+    "test": "node -e \"const { runAllTests } = require('./js/uat'); const r = runAllTests(); console.log('Passed:', r.passed, '/', r.total); if (r.failed > 0) { console.error('Failed:', r.failed); process.exit(1); }\"",
+    "test:verbose": "node -e \"const { runAllTests } = require('./js/uat'); const r = runAllTests(); console.log(JSON.stringify(r, null, 2)); if (r.failed > 0) process.exit(1);\"",
+    "php:serve": "php -S 127.0.0.1:8000 -t php",
+    "php:test": "php php/tests/UatTests.php"
+  },
+  "keywords": [
+    "phone-leasing",
+    "device-financing",
+    "mpesa",
+    "kenya",
+    "ledger",
+    "fintech"
+  ],
+  "author": "Davis Kirui <dvskips-pixel>",
+  "license": "MIT"
+}
+
